@@ -21,7 +21,6 @@
      
       var map;
 
-      
       function initmap() {
 	    // set up the map
         map = new L.Map('map');
@@ -32,8 +31,8 @@
         var osm = new L.TileLayer(osmUrl, {minZoom: 8, maxZoom: 20, attribution: osmAttrib});	 	
 
 	    // Portland
-	    map.setView(new L.LatLng(45.522, -122.687),12);
-	    map.addLayer(osm);
+        map.setView(new L.LatLng(45.522, -122.687),12);
+        map.addLayer(osm);
       }
 
       initmap();
