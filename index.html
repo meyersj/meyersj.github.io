@@ -1,11 +1,38 @@
 <html>
 
+  <head>
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.js"></script>
+  </head>
+
   <title>
-  TEST
+    TEST
   </title>
 
   <head>
-  TEST GIT PAGE
+    TEST GIT PAGE<br><br>
+    <div id="map"></div>
+    <script>
+      var map;
+
+
+      function initmap() {
+	  // set up the map
+	  map = new L.Map('map');
+
+	  // create the tile layer with correct attribution
+      var osmUrl='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+	  var osmAttrib='Map data &copy; OpenStreetMap contributors';
+	  var osm = new L.TileLayer(osmUrl, {minZoom: 8, maxZoom: 20, attribution: osmAttrib});	 	
+
+	  // Portland
+	  map.setView(new L.LatLng(45.522, -122.687),12);
+	  map.addLayer(osm);
+}
+
+      initmap();
+    </script>
   </head>
 
 </html>
