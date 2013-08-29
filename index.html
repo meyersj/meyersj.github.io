@@ -19,21 +19,21 @@
 
      <script>
      
-       var map;
+      var map;
 
       
       function initmap() {
-	  // set up the map
-	  map = new L.Map('map');
+	    // set up the map
+        map = new L.Map('map');
 
-	  // create the tile layer with correct attribution
-      var osmUrl='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
-	  var osmAttrib='Map data &copy; OpenStreetMap contributors';
-	  var osm = new L.TileLayer(osmUrl, {minZoom: 8, maxZoom: 20, attribution: osmAttrib});	 	
+	    // create the tile layer with correct attribution
+        var osmUrl='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+	    var osmAttrib='Map data &copy; OpenStreetMap contributors';
+	    var osm = new L.TileLayer(osmUrl, {minZoom: 8, maxZoom: 20, attribution: osmAttrib});	 	
 
-	  // Portland
-	  map.setView(new L.LatLng(45.522, -122.687),12);
-	  map.addLayer(osm);
+	    // Portland
+	    map.setView(new L.LatLng(45.522, -122.687),12);
+	    map.addLayer(osm);
       }
 
       initmap();
