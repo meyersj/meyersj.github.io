@@ -1,8 +1,11 @@
 <html>
 
   <head>
-    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.css" />
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.css"/>
     <script src="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.js"></script>
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <link rel="points" type="application/json" href="./test.geojson"/>
+
   </head>
 
 
@@ -36,6 +39,16 @@
       }
 
       initmap();
+
+      $.getJSON($('link[rel="points"]').attr("href"), function(data) {
+        var geojson = L.geoJson(data, {
+        onEachFeature: function (feature, layer) {
+        layer.bindPopup(feature.properties.name);
+        }
+      });
+      geojson.addTo(map);
+  });
+
 
     </script>
   </head>
