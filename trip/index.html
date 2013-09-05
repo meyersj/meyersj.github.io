@@ -17,10 +17,13 @@
     TEST GIT PAGE<br><br>
     
 
-      <div id="map" style="height:500px;width:500px"></div>
+      <div id="map" style="height:700px;width:100%"></div>
     
 
      <script>
+
+
+
      
       var map;
 
@@ -40,14 +43,16 @@
 
       initmap();
 
-      $.getJSON($('link[rel="points"]').attr("href"), function(data) {
-        var geojson = L.geoJson(data, {
-        onEachFeature: function (feature, layer) {
-        layer.bindPopup(feature.properties.name);
-        }
-      });
-      geojson.addTo(map);
-  });
+
+      image = "images/5th_avenue.jpg";
+      var marker = new L.marker(new L.LatLng(45.524, -122.675))
+        .bindPopup("<img src=" + image + "/>", {minWidth:330, minHeight:247})
+          .addTo(map).addTo(map);
+      var marker2 = new L.marker(new L.LatLng(45.524, -123)).addTo(map)
+        .bindPopup("<img src=" + "images/hatfield.jpg/>", {minWidth:400, minHeight:260})
+          .addTo(map);
+
+
 
 
     </script>

@@ -4,7 +4,8 @@
         {
             "type": "Feature",
             "properties": {
-                "": "Home"
+                "destination": "Home",
+                "image": "<img src=" + "/images/5th_avenue.jpg" + "/> Current temperature in " + location + " is: " + temp_f"
             },
             "geometry": {
                 "type": "Point",
@@ -17,7 +18,7 @@
         {
             "type": "Feature",
             "properties": {
-                "": "Devils Lookout"
+                "destination": "Devils Lookout"
             },
             "geometry": {
                 "type": "Point",
