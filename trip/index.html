@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.css"/>
     <script src="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.js"></script>
     <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="numbered_icon.js"></script>
     <link rel="points" type="application/json" href="./test.geojson"/>
 
   </head>
@@ -19,10 +20,22 @@
 
       <div id="map" style="height:700px;width:100%"></div>
     
+    <style>.leaflet-div-icon {
+    background: transparent;
+    border: none;
+   }
+ 
+.leaflet-marker-icon .number{
+position: relative;
+top: -37px;
+font-size: 12px;
+width: 25px;
+text-align: center;
+}
+</style>
+
 
      <script>
-
-
 
      
       var map;
@@ -43,12 +56,13 @@
 
       initmap();
 
-      var marker = new L.marker(new L.LatLng(45.524, -122.675))
-        .bindPopup("<img src=" + "https://dl.dropbox.com/sh/at3xqoei1wbc0ui/eWY3LGBx2J/5th_avenue.jpg/>", {minWidth:330, minHeight:247})
-          .addTo(map).addTo(map);
-      var marker2 = new L.marker(new L.LatLng(45.524, -123)).addTo(map)
-        .bindPopup("<img src=" + "https://dl.dropbox.com/sh/at3xqoei1wbc0ui/zoLjbs5d7I/hatfield.jpg/>", {minWidth:400, minHeight:260})
+      var one = new L.marker(new L.LatLng(45.524, -122.675), {icon:	new L.NumberedDivIcon({number: '1'})})
+        .bindPopup("<img src='https://dl.dropbox.com/sh/at3xqoei1wbc0ui/eWY3LGBx2J/5th_avenue.jpg'/>", {minWidth:330, minHeight:247})
           .addTo(map);
+      var two = new L.marker(new L.LatLng(45.524, -123), {icon:	new L.NumberedDivIcon({number: '2'})})
+        .bindPopup("<img src='https://dl.dropbox.com/sh/at3xqoei1wbc0ui/zoLjbs5d7I/hatfield.jpg'/>", {minWidth:400, minHeight:260})
+          .addTo(map);
+
 
 
 
