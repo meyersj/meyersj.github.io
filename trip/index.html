@@ -43,13 +43,11 @@
 
       initmap();
 
-
-      image = "images/5th_avenue.jpg";
       var marker = new L.marker(new L.LatLng(45.524, -122.675))
-        .bindPopup("<img src=" + image + "/>", {minWidth:330, minHeight:247})
+        .bindPopup("<img src=" + "https://dl.dropbox.com/sh/at3xqoei1wbc0ui/eWY3LGBx2J/5th_avenue.jpg/>", {minWidth:330, minHeight:247})
           .addTo(map).addTo(map);
       var marker2 = new L.marker(new L.LatLng(45.524, -123)).addTo(map)
-        .bindPopup("<img src=" + "images/hatfield.jpg/>", {minWidth:400, minHeight:260})
+        .bindPopup("<img src=" + "https://dl.dropbox.com/sh/at3xqoei1wbc0ui/zoLjbs5d7I/hatfield.jpg/>", {minWidth:400, minHeight:260})
           .addTo(map);
 
 
