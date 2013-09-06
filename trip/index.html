@@ -34,13 +34,17 @@
 	  var loc2 = new L.LatLng(45.524, -123);
       var center2 = new L.LatLng(45.57, -123);
 
-      var one = new L.marker(loc1, {icon: new L.NumberedDivIcon({number: '1'})}).bindPopup("<img src=https://dl.dropbox.com/sh/at3xqoei1wbc0ui/eWY3LGBx2J/5th_avenue.jpg/>",{minWidth:330, minHeight:247}).addTo(map);
+      var popup1 = "<img src=https://dl.dropbox.com/sh/at3xqoei1wbc0ui/eWY3LGBx2J/5th_avenue.jpg/>";
+      var popup2 = "<img src=https://dl.dropbox.com/sh/at3xqoei1wbc0ui/zoLjbs5d7I/hatfield.jpg/>";
+
+
+      var one = new L.marker(loc1, {icon: new L.NumberedDivIcon({number: '1'})}).bindPopup(popup1,{minWidth:330, minHeight:247}).addTo(map);
 
       one.on('click', function(e) {
         map.panTo(center1)
       });
 
-      var two = new L.marker(loc2, {icon: new L.NumberedDivIcon({number: '2'})}).bindPopup("<img src=https://dl.dropbox.com/sh/at3xqoei1wbc0ui/zoLjbs5d7I/hatfield.jpg/>", {minWidth:400, minHeight:260}).addTo(map);
+      var two = new L.marker(loc2, {icon: new L.NumberedDivIcon({number: '2'})}).bindPopup(, {minWidth:400, minHeight:260}).addTo(map);
 
       two.on('click', function(e) {
         map.panTo(center2)
