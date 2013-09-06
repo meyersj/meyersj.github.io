@@ -2,14 +2,15 @@
 
   <head>
     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.css"/>
+    <link rel="stylesheet" href="../style.css"/>
 
-<!--[if lte IE 8]>
-     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.ie.css" />
- <![endif]-->
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.ie.css" />
+    <![endif]-->
     <script src="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.js"></script>
     <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="numbered_icon.js"></script>
-    <link rel="points" type="application/json" href="./test.geojson"/>
+    <script src="map.js"></script>
+    <!--link rel="points" type="application/json" href="./test.geojson"/-->
 
   </head>
 
@@ -22,72 +23,28 @@
     TEST GIT PAGE<br><br>
     
 
-      <div id="map" style="height:500px;width:100%"></div>
+    <div id="map" style="height:90%;width:100%"></div>
     
-    <style>.leaflet-div-icon {
-    background: transparent;
-    border: none;
-   }
- 
-.leaflet-marker-icon .number{
-position: relative;
-top: -37px;
-font-size: 12px;
-width: 25px;
-text-align: center;
-}
-</style>
-
-
-     <script>
-
-     
+    <script>
       var map;
-
-      function initmap() {
-	    // set up the map
-        map = new L.Map('map');
-
-	    // create the tile layer with correct attribution
-        //var osmUrl='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
-        //var mapboxUrl='http://a.tiles.mapbox.com/v2/mapbox.baltimore-retro/{z}/{x}/{y}.png';
-        var mapboxUrl='http://a.tiles.mapbox.com/v3/meyersj.map-6u6rh54c/{z}/{x}/{y}.png'
-        var attrib='Map data &copy; OpenStreetMap contributors, Designs &copy; Mapbox';
-        var tiles = new L.TileLayer(mapboxUrl, {minZoom: 8, maxZoom: 20, attribution: attrib});	 	
-
-	    // Portland
-        map.setView(new L.LatLng(45.524, -122.675),12);
-        map.addLayer(tiles);
-      }
-
       initmap();
 
-	  var one_loc = new L.LatLng(45.524, -122.675);
-      var one_center = new L.LatLng(45.55, -122.675);
-	  var two_loc = new L.LatLng(45.524, -123);
-      var two_center = new L.LatLng(45.565, -123);
+	  var loc1 = new L.LatLng(45.524, -122.675);
+      var center1 = new L.LatLng(45.57, -122.675);
+	  var loc2 = new L.LatLng(45.524, -123);
+      var center2 = new L.LatLng(45.57, -123);
 
-      var one = new L.marker(one_loc , {icon: new L.NumberedDivIcon({number: '1'})})
-        .bindPopup("<img src='https://dl.dropbox.com/sh/at3xqoei1wbc0ui/eWY3LGBx2J/5th_avenue.jpg'/>", {minWidth:330, minHeight:247})
-          .addTo(map);
+      var one = new L.marker(loc1, {icon: new L.NumberedDivIcon({number: '1'})}).bindPopup("<img src=https://dl.dropbox.com/sh/at3xqoei1wbc0ui/eWY3LGBx2J/5th_avenue.jpg/>",{minWidth:330, minHeight:247}).addTo(map);
 
-    one.on('click', function(e) {
-    map.panTo(one_center)
-    });
+      one.on('click', function(e) {
+        map.panTo(center1)
+      });
 
+      var two = new L.marker(loc2, {icon: new L.NumberedDivIcon({number: '2'})}).bindPopup("<img src=https://dl.dropbox.com/sh/at3xqoei1wbc0ui/zoLjbs5d7I/hatfield.jpg/>", {minWidth:400, minHeight:260}).addTo(map);
 
-      var two = new L.marker(two_loc, {icon:	new L.NumberedDivIcon({number: '2'})})
-        .bindPopup("<img src='https://dl.dropbox.com/sh/at3xqoei1wbc0ui/zoLjbs5d7I/hatfield.jpg'/>", {minWidth:400, minHeight:260})
-          .addTo(map);
-
-    two.on('click', function(e) {
-    map.panTo(two_center)
-    });
-
-
-
-
-
+      two.on('click', function(e) {
+        map.panTo(center2)
+      });
     </script>
   </head>
 
