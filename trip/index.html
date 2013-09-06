@@ -44,7 +44,7 @@
         map.panTo(center1)
       });
 
-      var two = new L.marker(loc2, {icon: new L.NumberedDivIcon({number: '2'})}).bindPopup(, {minWidth:400, minHeight:260}).addTo(map);
+      var two = new L.marker(loc2, {icon: new L.NumberedDivIcon({number: '2'})}).bindPopup(popup2, {minWidth:400, minHeight:260}).addTo(map);
 
       two.on('click', function(e) {
         map.panTo(center2)
