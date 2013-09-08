@@ -10,7 +10,7 @@
     <script src="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.js"></script>
     <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="map.js"></script>
-    <!--link rel="points" type="application/json" href="./test.geojson"/-->
+    <link rel="points" type="application/json" href="./test.geojson">
 
   </head>
 
@@ -23,12 +23,15 @@
     TEST GIT PAGE<br><br>
     
 
-    <div id="map" style="height:90%;width:100%"></div>
+    <div id="markerslist">
+      <table></table>
+    </div>
+    <div id="map" style="height:80%;width:100%"></div>
     
     <script>
       var map;
       initmap();
-
+/*
       var loc1 = new L.LatLng(45.524, -122.675);
       var center1 = new L.LatLng(45.57, -122.675);
       var loc2 = new L.LatLng(45.524, -123);
@@ -53,6 +56,71 @@
       two.on('click', function(e) {
         map.panTo(center2)
       });
+
+      function onEachFeature(feature, layer) {
+        if (feature.properties) {
+          layer.bindPopup(feature.properties.name);
+        }
+          layer.on({
+          mouseover: highlightFeature,
+          mouseout: resetHighlight,
+          click: zoomToFeature
+        });
+      } 
+*/
+
+      function clickMarker(e) {
+        var lat = e.latlng.lat + 0.03;
+        var lng = e.latlng.lng;
+        map.panTo({lat:lat, lng:lng});
+      }
+      
+
+      function onEachFeature(feature, layer) {
+        //does this feature have a property named popupContent?
+        layer.bindPopup(feature.properties.popupContent, {
+          minWidth: feature.properties.minWidth, 
+          minHeight: feature.properties.minHeight,
+        });
+        layer.on({click: clickMarker});
+      }
+    
+    var link = $('<a href="#" class="speciallink">TestLink</a>').click(function() {
+       alert("test");
+    })[0];
+
+
+    var test_marker = new L.marker(new L.LatLng(45.50, -122.675),{icon: new L.NumberedDivIcon({number: '3'})})
+        .bindPopup(link)
+        .addTo(map);
+
+
+      $.getJSON($('link[rel="points"]').attr("href"), function(data) {
+        var geojson = L.geoJson(data, {
+          onEachFeature: onEachFeature,
+          pointToLayer: function (feature, latlng) {
+             return new L.marker(latlng, {
+               icon: new L.NumberedDivIcon({number: feature.properties.number}), 
+             });
+          }
+
+        });
+        
+        geojson.eachLayer( function (layer) {
+          var id = layer._leaflet_id;
+          var name = layer.feature.properties.name;
+  
+         $( "#markerslist table" ).append('<tr><td><a href="#" onclick="map._layers['+id+'].openPopup();">'+name+'</a></td></tr>');
+
+        });
+
+        geojson.addTo(map);
+
+    }); 
+
+
+
+
     </script>
   </head>
 

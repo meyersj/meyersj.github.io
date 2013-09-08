@@ -1,32 +1,34 @@
 {
-    "type": "FeatureCollection",
+  "type": "FeatureCollection",
     "features": [
-        {
-            "type": "Feature",
-            "properties": {
-                "destination": "Home",
-                "image": "<img src=" + "/images/5th_avenue.jpg" + "/> Current temperature in " + location + " is: " + temp_f"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -122.67539978027342,
-                    45.52438983143154
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "destination": "Devils Lookout"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -123.95599365234375,
-                    45.471688258104614
-                ]
-            }
-        }
-    ]
+    {
+      "type": "Feature",
+      "properties": {
+      "number":"1",
+      "name":"Start",
+      "popupContent":"<center>Jeffs Home - Downtown Portland</center><br><img src=https://dl.dropbox.com/sh/at3xqoei1wbc0ui/eWY3LGBx2J/5th_avenue.jpg/>",
+      "minWidth":"330",
+      "minHeight":"247"
+      },
+      "geometry": {
+      "type": "Point",
+      "coordinates": [-122.675, 45.524]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+      "number":"2",
+      "name":"Max Station",
+      "popupContent":"<center>Hatfield Goverment Max Station - Hillsboro</center><br><img src=https://dl.dropbox.com/sh/at3xqoei1wbc0ui/zoLjbs5d7I/hatfield.jpg/>",
+      "minWidth":"400",
+      "minHeight":"260"
+      },
+      "geometry": {
+      "type": "Point",
+      "coordinates": [-122.99, 45.524]
+      }
+    }
+  ]
 }
+
