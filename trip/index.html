@@ -11,6 +11,13 @@
     <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="map.js"></script>
     <link rel="points" type="application/json" href="./test.geojson">
+    <link rel="day1" type="application/json" href="./day_1.geojson">
+    <link rel="day2" type="application/json" href="./day_2.geojson">
+    <link rel="day3" type="application/json" href="./day_3.geojson">
+    <link rel="day4" type="application/json" href="./day_4.geojson">
+    <link rel="day5" type="application/json" href="./day_5.geojson">
+
+   
 
   </head>
 
@@ -116,10 +123,34 @@
 
         geojson.addTo(map);
 
-    }); 
 
+      }); 
 
+      var routeStyle = {
+        "color": "#A01C1C",
+        "weight": 5,
+        "opacity": 0.65
+      };
 
+      $.getJSON($('link[rel="day1"]').attr("href"), function(data) {
+        var day1 = L.geoJson(data, {style: routeStyle}).addTo(map);
+      });
+
+      $.getJSON($('link[rel="day2"]').attr("href"), function(data) {
+        var day2 = L.geoJson(data, {style: routeStyle}).addTo(map);
+      });
+
+      $.getJSON($('link[rel="day3"]').attr("href"), function(data) {
+        var day3 = L.geoJson(data, {style: routeStyle}).addTo(map);
+      });
+
+      $.getJSON($('link[rel="day4"]').attr("href"), function(data) {
+        var day4 = L.geoJson(data, {style: routeStyle}).addTo(map);
+      });
+
+      $.getJSON($('link[rel="day5"]').attr("href"), function(data) {
+        var day5 = L.geoJson(data, {style: routeStyle}).addTo(map);
+      });
 
     </script>
   </head>
