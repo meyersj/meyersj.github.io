@@ -107,7 +107,7 @@
           onEachFeature: onEachFeature,
           pointToLayer: function (feature, latlng) {
              return new L.marker(latlng, {
-               icon: new L.NumberedDivIcon({number: feature.properties.number}), 
+               icon: new L.NumberedDivIcon({number: feature.properties.count}), 
              });
           }
 

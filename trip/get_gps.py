@@ -10,7 +10,7 @@ lon_tag = 'GPS GPSLongitude'
 DateTime_tag = 'Image DateTime'
 lat_ref_tag = 'GPS GPSLatitudeRef'
 lon_ref_tag = 'GPS GPSLongitudeRef'
-
+orientation_tag = 'Image Orientation'
 
 coordinates = []
 no_coordinates = []
@@ -35,6 +35,8 @@ for photo in photos:
   photo_name = os.path.basename(photo)
   tags = exifread.process_file(f)
   DateTime = datetime.datetime.strptime(str(tags[DateTime_tag]), "%Y:%m:%d %H:%M:%S")
+  
+
 
   try:
     lat = coordinate_extract(str(tags[lat_tag]))
@@ -53,10 +55,13 @@ for photo in photos:
     data['photo_name'] = photo_name
     data['datetime'] = DateTime      
     dates.append(DateTime)
+    print photo_name
+    print tags[orientation_tag]
   except KeyError:
     pass
 
   photos_dict[DateTime] = data
+
 dates.sort()
 
 
@@ -67,7 +72,7 @@ for date in dates:
   data = photos_dict[date]
   output_table.writerow([ data['photo_name'], \
                           "<img src=" + "test_photos/" + data['photo_name'] + "/>", \
-                          count, data['datetime'], \
+                          str(data['datetime']), str(count), \
                           data['lat'], data['lon'] ]) 
 
   count += 1
