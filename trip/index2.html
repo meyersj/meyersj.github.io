@@ -53,10 +53,7 @@
 
       function onEachFeature(feature, layer) {
         //does this feature have a property named popupContent?
-        layer.bindPopup(feature.properties.popupContent, {
-          minWidth: feature.properties.minWidth, 
-          minHeight: feature.properties.minHeight,
-        });
+        layer.bindPopup(feature.properties.popupContent);
         //layer.on({click: clickMarker});
       }
 
