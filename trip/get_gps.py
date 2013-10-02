@@ -1,9 +1,6 @@
-import exifread, os, glob, csv, datetime
+import exifread, os, glob, datetime, ast, json
 
 photos = glob.glob('/home/jeff/web/gitpage/trip/test_photos/*.jpeg')
-
-output_file = open('output.csv', 'wb')
-output_table = csv.writer(output_file)
 
 lat_tag = 'GPS GPSLatitude'
 lon_tag = 'GPS GPSLongitude'
@@ -30,21 +27,20 @@ dates = []
 photos_dict = {}
 
 for photo in photos:
+  
   f = open(photo, 'rb')
   data = {}
   photo_name = os.path.basename(photo)
   tags = exifread.process_file(f)
-  DateTime = datetime.datetime.strptime(str(tags[DateTime_tag]), "%Y:%m:%d %H:%M:%S")
-  
-
 
   try:
+    DateTime = datetime.datetime.strptime(str(tags[DateTime_tag]), "%Y:%m:%d %H:%M:%S")
     lat = coordinate_extract(str(tags[lat_tag]))
     lon = coordinate_extract(str(tags[lon_tag]))
     lat_ref = str(tags[lat_ref_tag])
     lon_ref = str(tags[lon_ref_tag])
-
-
+    print photo_name
+    
     if(lon_ref == 'W'):
       lon = -lon
     if(lat_ref == 'S'):
@@ -52,32 +48,40 @@ for photo in photos:
 
     data['lat'] = lat
     data['lon'] = lon
-    data['photo_name'] = photo_name
     data['datetime'] = DateTime      
+    data['photo_name'] = photo_name
     dates.append(DateTime)
-    print photo_name
-    print tags[orientation_tag]
+
+    f.close()
+    photos_dict[DateTime] = data
+  
   except KeyError:
     pass
-
-  photos_dict[DateTime] = data
-
+  
 dates.sort()
 
 
+data_out = {'type': 'FeatureCollection','features': []}
+
 count = 1
-output_table.writerow(['photo_name', 'popupContent', 'datetime', 'count', 'lat', 'lon'])
 
 for date in dates:
   data = photos_dict[date]
-  output_table.writerow([ data['photo_name'], \
-                          "<img src=" + "test_photos/" + data['photo_name'] + "/>", \
-                          str(data['datetime']), str(count), \
-                          data['lat'], data['lon'] ]) 
-
+  popupContent = "<img src=" + "test_photos/" + data['photo_name'] + "/>"
+  feature_out = {'type':'Feature', 
+                 'geometry':{'type':'Point', 
+                 'coordinates':[data['lon'] , data['lat']]},
+                 'properties':{'photo_name': data['photo_name'],
+                               'count':count,
+                               'popupContent':popupContent,
+                               'datetime':str(data['datetime'])}}
+                
+  data_out['features'].append(feature_out)
   count += 1
 
-output_file.close()
+f = open('test.geojson', 'w')
+f.write(json.dumps(data_out, indent=2, separators=(',',': ')))
+f.close()
 
 
 

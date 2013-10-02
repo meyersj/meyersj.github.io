@@ -3,18 +3,18 @@
   <head>
     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.css"/>
     <link rel="stylesheet" href="../MarkerCluster.css"/>
-
+    <link rel="stylesheet" href="../MarkerCluster.Default.css"/>
     <link rel="stylesheet" href="../style.css"/>
  
     <!--[if lte IE 8]>
     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.ie.css" />
     <![endif]-->
     <script src="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.js"></script>
-    <script src="../leaflet.markercluster.js"></script>
+    <script src="../leaflet.markercluster-src.js"></script>
 
     <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="map.js"></script>
-    <link rel="points" type="application/json" href="./test.geojson">
+    <!--link rel="points" type="application/json" href="./test.geojson"-->
     <link rel="day1" type="application/json" href="./day_1.geojson">
     <link rel="day2" type="application/json" href="./day_2.geojson">
     <link rel="day3" type="application/json" href="./day_3.geojson">
@@ -48,7 +48,8 @@
         var lng = e.latlng.lng;
         map.panTo({lat:lat, lng:lng});
       }
-      
+     
+
 
       function onEachFeature(feature, layer) {
         //does this feature have a property named popupContent?
@@ -56,37 +57,25 @@
           minWidth: feature.properties.minWidth, 
           minHeight: feature.properties.minHeight,
         });
-        layer.on({click: clickMarker});
+        //layer.on({click: clickMarker});
       }
 
-      $.getJSON($('link[rel="points"]').attr("href"), function(data) {
-
-        var markers = L.MarkerClusterGroup();
-
+      //var icon = 'http://dl.dropbox.com/s/vh7fr9sc9pobesk/marker_hole2.png';
+      function pointToLayer(feature, latlng) { 
+        return new L.marker(latlng, {
+          icon: new L.NumberedDivIcon({number: feature.properties.count}),
+        });
+      }
+ 
+      $.getJSON("./test.geojson", function (data) {
+        var markers = new L.MarkerClusterGroup();
         var geojson = L.geoJson(data, {
           onEachFeature: onEachFeature,
-          pointToLayer: function (feature, latlng) {
-             return new L.marker(latlng, {
-               icon: new L.NumberedDivIcon({number: feature.properties.count}), 
-             });
-          }
-
+          pointToLayer: pointToLayer
         });
-        
-        geojson.eachLayer( function (layer) {
-          var id = layer._leaflet_id;
-          var name = layer.feature.properties.name;
-  
-        $( "#markerslist table" ).append('<tr><td><a href="#" onclick="map._layers['+id+'].openPopup();">'+name+'</a></td></tr>');
-
-        });
-
-        
         markers.addLayer(geojson);
-        map.addLayers(markers);
-
-
-      }); 
+        map.addLayer(markers);
+      });
 
       var routeStyle = {
         "color": "#A01C1C",
@@ -113,6 +102,11 @@
       $.getJSON($('link[rel="day5"]').attr("href"), function(data) {
         var day5 = L.geoJson(data, {style: routeStyle}).addTo(map);
       });
+
+
+
+
+
 
     </script>
   </head>
