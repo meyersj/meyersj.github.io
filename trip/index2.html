@@ -65,13 +65,14 @@
       }
  
       $.getJSON("./test.geojson", function (data) {
-        var markers = new L.MarkerClusterGroup();
+        //var markers = new L.MarkerClusterGroup();
         var geojson = L.geoJson(data, {
           onEachFeature: onEachFeature,
           pointToLayer: pointToLayer
         });
-        markers.addLayer(geojson);
-        map.addLayer(markers);
+        //markers.addLayer(geojson);
+        //map.addLayer(markers);
+        geojson.addTo(map);
       });
 
       var routeStyle = {
