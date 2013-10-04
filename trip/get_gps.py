@@ -1,4 +1,6 @@
 import exifread, os, glob, datetime, ast, json
+from urlparse import urlparse
+from os.path import basename
 
 photos = glob.glob('/home/jeff/web/gitpage/trip/test_photos/*.jpeg')
 
@@ -23,8 +25,17 @@ def coordinate_extract(string):
     return coordinate
 
 
+dropbox = {}
+with open('dropbox_photos.txt', 'rb') as f:
+    content = f.readlines()
+
+for url in content:
+  url = url.replace('\n', '')
+  dropbox[basename(urlparse(url).path)] = url
+
+
 dates = []
-photos_dict = {}
+photos_data = {}
 
 for photo in photos:
   
@@ -33,7 +44,6 @@ for photo in photos:
   photo_name = os.path.basename(photo)
   tags = exifread.process_file(f)
   DateTime = datetime.datetime.strptime(str(tags[DateTime_tag]), "%Y:%m:%d %H:%M:%S")
-  photos_dict[DateTime] = data
   print photo_name
 
   try:
@@ -71,14 +81,15 @@ for photo in photos:
   data['lat'] = lat
   data['lon'] = lon
   dates.append(DateTime)
+  photos_data[DateTime] = data
 
 dates.sort()
 data_out = {'type': 'FeatureCollection','features': []}
-count = 1
 
+count = 1
 for date in dates:
-  data = photos_dict[date]
-  popupContent = "<img src=" + "test_photos/" + data['photo_name'] + "/>"
+  data = photos_data[date]
+  popupContent = "<img src='%s'/>" % dropbox[data['photo_name']]
   feature_out = {'type':'Feature', 
                  'geometry':{'type':'Point', 
                  'coordinates':[data['lon'] , data['lat']]},
