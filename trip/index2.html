@@ -5,24 +5,13 @@
     <link rel="stylesheet" href="../MarkerCluster.css"/>
     <link rel="stylesheet" href="../MarkerCluster.Default.css"/>
     <link rel="stylesheet" href="../style.css"/>
- 
     <!--[if lte IE 8]>
     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.ie.css" />
     <![endif]-->
     <script src="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.js"></script>
     <script src="../leaflet.markercluster-src.js"></script>
-
     <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="./map.js"></script>
-    <!--link rel="points" type="application/json" href="./test.geojson"-->
-    <link rel="day1" type="application/json" href="./day_1.geojson">
-    <link rel="day2" type="application/json" href="./day_2.geojson">
-    <link rel="day3" type="application/json" href="./day_3.geojson">
-    <link rel="day4" type="application/json" href="./day_4.geojson">
-    <link rel="day5" type="application/json" href="./day_5.geojson">
-
-   
-
   </head>
 
 
@@ -80,8 +69,38 @@
         "opacity": 0.65
       };
 
+      $.getJSON('routes/max.geojson', function(data) {
+        var max = L.geoJson(data, {style: routeStyle}).addTo(map);
+      });
+
+      $.getJSON('routes/day1_v2.geojson', function(data) {
+        var max = L.geoJson(data, {style: routeStyle}).addTo(map);
+      });
+
+      $.getJSON('routes/day2_v2.geojson', function(data) {
+        var max = L.geoJson(data, {style: routeStyle}).addTo(map);
+      });
+
+      $.getJSON('routes/day3_v2.geojson', function(data) {
+        var max = L.geoJson(data, {style: routeStyle}).addTo(map);
+      });
+
+      $.getJSON('routes/day4_v2.geojson', function(data) {
+        var max = L.geoJson(data, {style: routeStyle}).addTo(map);
+      });
+
+      $.getJSON('routes/day5_first_portion_v2.geojson', function(data) {
+        var max = L.geoJson(data, {style: routeStyle}).addTo(map);
+      });
+
+      $.getJSON('routes/day5_last_portion_v2.geojson', function(data) {
+        var max = L.geoJson(data, {style: routeStyle}).addTo(map);
+      });
+
+
+      /*
       $.getJSON($('link[rel="day1"]').attr("href"), function(data) {
-        var day1 = L.geoJson(data, {style: routeStyle}).addTo(map);
+        //var day1 = L.geoJson(data, {style: routeStyle}).addTo(map);
       });
 
       $.getJSON($('link[rel="day2"]').attr("href"), function(data) {
@@ -99,7 +118,7 @@
       $.getJSON($('link[rel="day5"]').attr("href"), function(data) {
         var day5 = L.geoJson(data, {style: routeStyle}).addTo(map);
       });
-
+      */
 
 
 

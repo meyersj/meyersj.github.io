@@ -32,37 +32,48 @@ for photo in photos:
   data = {}
   photo_name = os.path.basename(photo)
   tags = exifread.process_file(f)
+  DateTime = datetime.datetime.strptime(str(tags[DateTime_tag]), "%Y:%m:%d %H:%M:%S")
+  photos_dict[DateTime] = data
+  print photo_name
 
   try:
-    DateTime = datetime.datetime.strptime(str(tags[DateTime_tag]), "%Y:%m:%d %H:%M:%S")
     lat = coordinate_extract(str(tags[lat_tag]))
     lon = coordinate_extract(str(tags[lon_tag]))
     lat_ref = str(tags[lat_ref_tag])
     lon_ref = str(tags[lon_ref_tag])
-    print photo_name
     
     if(lon_ref == 'W'):
       lon = -lon
     if(lat_ref == 'S'):
       kat = -lat
 
-    data['lat'] = lat
-    data['lon'] = lon
-    data['datetime'] = DateTime      
-    data['photo_name'] = photo_name
-    dates.append(DateTime)
-
     f.close()
-    photos_dict[DateTime] = data
-  
   except KeyError:
-    pass
-  
+    lat = 45.5720
+    lon = -123.0810
+
+  if photo_name == 're_photo2.jpeg':
+    lon = -122.67193436622618
+    lat = 45.52080050107107
+  elif photo_name == 're_photo4.jpeg':
+    lon = -122.83976554870604
+    lat = 45.50394073994564
+  elif photo_name == 're_photo30.jpeg':
+    lon = -123.55924129486083
+    lat = 45.58195317216897
+  elif photo_name == 're_photo41.jpeg':
+    lon = -123.971,
+    lat = 45.354166666666664
+
+
+  data['datetime'] = DateTime      
+  data['photo_name'] = photo_name
+  data['lat'] = lat
+  data['lon'] = lon
+  dates.append(DateTime)
+
 dates.sort()
-
-
 data_out = {'type': 'FeatureCollection','features': []}
-
 count = 1
 
 for date in dates:
@@ -74,7 +85,7 @@ for date in dates:
                  'properties':{'photo_name': data['photo_name'],
                                'count':count,
                                'popupContent':popupContent,
-                               'datetime':str(data['datetime'])}}
+                               'date':str(data['datetime'])}}
                 
   data_out['features'].append(feature_out)
   count += 1
