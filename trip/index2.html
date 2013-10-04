@@ -13,7 +13,7 @@
     <script src="../leaflet.markercluster-src.js"></script>
 
     <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="map.js"></script>
+    <script src="./map.js"></script>
     <!--link rel="points" type="application/json" href="./test.geojson"-->
     <link rel="day1" type="application/json" href="./day_1.geojson">
     <link rel="day2" type="application/json" href="./day_2.geojson">
@@ -72,7 +72,6 @@
         });
         markers.addLayer(geojson);
         map.addLayer(markers);
-        //geojson.addTo(map);
       });
 
       var routeStyle = {
