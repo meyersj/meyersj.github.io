@@ -2,7 +2,7 @@ import exifread, os, glob, datetime, ast, json
 from urlparse import urlparse
 from os.path import basename
 
-photos = glob.glob('/home/jeff/web/gitpage/trip/test_photos/*.jpeg')
+photos = glob.glob('/home/jeff/web/bike_trip_photos/test_photos/*.jpeg')
 
 lat_tag = 'GPS GPSLatitude'
 lon_tag = 'GPS GPSLongitude'
@@ -10,7 +10,8 @@ DateTime_tag = 'Image DateTime'
 lat_ref_tag = 'GPS GPSLatitudeRef'
 lon_ref_tag = 'GPS GPSLongitudeRef'
 orientation_tag = 'Image Orientation'
-
+width_tag = 'Image XResolution'
+height_tag = 'Image YResolution'
 coordinates = []
 no_coordinates = []
 
@@ -45,6 +46,11 @@ for photo in photos:
   tags = exifread.process_file(f)
   DateTime = datetime.datetime.strptime(str(tags[DateTime_tag]), "%Y:%m:%d %H:%M:%S")
   print photo_name
+  
+  #for tag in tags.keys():
+    #print tag
+  #print tags[width_tag]
+  #print tags[height_tag]
 
   try:
     lat = coordinate_extract(str(tags[lat_tag]))
@@ -90,6 +96,7 @@ count = 1
 for date in dates:
   data = photos_data[date]
   popupContent = "<img src='%s'/>" % dropbox[data['photo_name']]
+  #popupContent = ""
   feature_out = {'type':'Feature', 
                  'geometry':{'type':'Point', 
                  'coordinates':[data['lon'] , data['lat']]},

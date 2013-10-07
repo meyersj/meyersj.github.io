@@ -546,6 +546,630 @@
         "photo_name": "re_photo44.jpeg",
         "popupContent": "<img src='https://dl.dropbox.com/s/n0hcbgne9u6apyn/re_photo44.jpeg'/>"
       }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.94033333333333,
+          45.3245
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "count": 35,
+        "date": "2013-09-13 11:17:13",
+        "photo_name": "re_photo45.jpeg",
+        "popupContent": "<img src='https://dl.dropbox.com/s/tlh25403idz1c1m/re_photo45.jpeg'/>"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.94066666666667,
+          45.32416666666666
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "count": 36,
+        "date": "2013-09-13 11:18:16",
+        "photo_name": "re_photo46.jpeg",
+        "popupContent": "<img src='https://dl.dropbox.com/s/pvdr842te924sxz/re_photo46.jpeg'/>"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.9405,
+          45.32416666666666
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "count": 37,
+        "date": "2013-09-13 11:19:13",
+        "photo_name": "re_photo48.jpeg",
+        "popupContent": "<img src='https://dl.dropbox.com/s/klfhrhcvyy4pr5c/re_photo48.jpeg'/>"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.96233333333333,
+          45.211
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "count": 38,
+        "date": "2013-09-13 12:12:00",
+        "photo_name": "re_photo54.jpeg",
+        "popupContent": "<img src='https://dl.dropbox.com/s/ea7vyxo24rxfo0j/re_photo54.jpeg'/>"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.96933333333334,
+          45.2385
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "count": 39,
+        "date": "2013-09-13 12:12:52",
+        "photo_name": "re_photo50.jpeg",
+        "popupContent": "<img src='https://dl.dropbox.com/s/6p44ea85jkyn2bh/re_photo50.jpeg'/>"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.96933333333334,
+          45.2385
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "count": 40,
+        "date": "2013-09-13 12:12:56",
+        "photo_name": "re_photo51.jpeg",
+        "popupContent": "<img src='https://dl.dropbox.com/s/5nk3ppjpnpzul7t/re_photo51.jpeg'/>"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.97083333333333,
+          45.21516666666667
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "count": 41,
+        "date": "2013-09-13 12:38:16",
+        "photo_name": "re_photo52.jpeg",
+        "popupContent": "<img src='https://dl.dropbox.com/s/qhtcj5jd2hce8wz/re_photo52.jpeg'/>"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.97083333333333,
+          45.21516666666667
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "count": 42,
+        "date": "2013-09-13 12:45:11",
+        "photo_name": "re_photo53.jpeg",
+        "popupContent": "<img src='https://dl.dropbox.com/s/qo3muk7qtwzm2nu/re_photo53.jpeg'/>"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.93033333333334,
+          45.170833333333334
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "count": 43,
+        "date": "2013-09-13 14:14:14",
+        "photo_name": "re_photo59.jpeg",
+        "popupContent": "<img src='https://dl.dropbox.com/s/0eg9aeo37oxd96q/re_photo59.jpeg'/>"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.93033333333334,
+          45.170833333333334
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "count": 44,
+        "date": "2013-09-13 14:14:31",
+        "photo_name": "re_photo55.jpeg",
+        "popupContent": "<img src='https://dl.dropbox.com/s/7qvoa9a0pqvmoze/re_photo55.jpeg'/>"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.93033333333334,
+          45.170833333333334
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "count": 45,
+        "date": "2013-09-13 14:14:31",
+        "photo_name": "re_photo55.jpeg",
+        "popupContent": "<img src='https://dl.dropbox.com/s/7qvoa9a0pqvmoze/re_photo55.jpeg'/>"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.93033333333334,
+          45.170833333333334
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "count": 46,
+        "date": "2013-09-13 14:14:38",
+        "photo_name": "re_photo56.jpeg",
+        "popupContent": "<img src='https://dl.dropbox.com/s/354hbtiso7go0ju/re_photo56.jpeg'/>"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.93033333333334,
+          45.170833333333334
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "count": 47,
+        "date": "2013-09-13 14:14:38",
+        "photo_name": "re_photo56.jpeg",
+        "popupContent": "<img src='https://dl.dropbox.com/s/354hbtiso7go0ju/re_photo56.jpeg'/>"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.96466666666667,
+          45.14683333333333
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "count": 48,
+        "date": "2013-09-13 14:33:30",
+        "photo_name": "re_photo68.jpeg",
+        "popupContent": "<img src='https://dl.dropbox.com/s/vgr0f6oloz9y3cs/re_photo68.jpeg'/>"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.96466666666667,
+          45.147
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "count": 49,
+        "date": "2013-09-13 14:33:35",
+        "photo_name": "re_photo69.jpeg",
+        "popupContent": "<img src='https://dl.dropbox.com/s/rm46kk5gymd2ihi/re_photo69.jpeg'/>"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.96466666666667,
+          45.147
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "count": 50,
+        "date": "2013-09-13 14:33:35",
+        "photo_name": "re_photo69.jpeg",
+        "popupContent": "<img src='https://dl.dropbox.com/s/rm46kk5gymd2ihi/re_photo69.jpeg'/>"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.97,
+          45.14216666666667
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "count": 51,
+        "date": "2013-09-13 14:39:57",
+        "photo_name": "re_photo65.jpeg",
+        "popupContent": "<img src='https://dl.dropbox.com/s/2jvriqelxvwkhhh/re_photo65.jpeg'/>"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.97,
+          45.14216666666667
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "count": 52,
+        "date": "2013-09-13 14:40:01",
+        "photo_name": "re_photo60.jpeg",
+        "popupContent": "<img src='https://dl.dropbox.com/s/dra9onk0zeqo46v/re_photo60.jpeg'/>"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.97016666666667,
+          45.14233333333333
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "count": 53,
+        "date": "2013-09-13 14:43:43",
+        "photo_name": "re_photo64.jpeg",
+        "popupContent": "<img src='https://dl.dropbox.com/s/ibdpwwyt0ovb5fp/re_photo64.jpeg'/>"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.948,
+          45.067166666666665
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "count": 54,
+        "date": "2013-09-13 15:40:36",
+        "photo_name": "re_photo75.jpeg",
+        "popupContent": "<img src='https://dl.dropbox.com/s/qswabmi7175hdyg/re_photo75.jpeg'/>"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -124.01266666666666,
+          44.971
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "count": 55,
+        "date": "2013-09-14 07:59:29",
+        "photo_name": "re_photo71.jpeg",
+        "popupContent": "<img src='https://dl.dropbox.com/s/thp4hn3u5c8ptwi/re_photo71.jpeg'/>"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.94316666666667,
+          45.027833333333334
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "count": 56,
+        "date": "2013-09-14 09:28:54",
+        "photo_name": "re_photo73.jpeg",
+        "popupContent": "<img src='https://dl.dropbox.com/s/0rg66omthu7dryp/re_photo73.jpeg'/>"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.94316666666667,
+          45.027833333333334
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "count": 57,
+        "date": "2013-09-14 09:29:00",
+        "photo_name": "re_photo74.jpeg",
+        "popupContent": "<img src='https://dl.dropbox.com/s/76weilo2fdh41ve/re_photo74.jpeg'/>"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.94916666666667,
+          45.057
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "count": 58,
+        "date": "2013-09-14 09:57:39",
+        "photo_name": "re_photo80.jpeg",
+        "popupContent": "<img src='https://dl.dropbox.com/s/e89td42wk6gqq0k/re_photo80.jpeg'/>"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.91166666666666,
+          45.042833333333334
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "count": 59,
+        "date": "2013-09-14 09:57:43",
+        "photo_name": "re_photo76.jpeg",
+        "popupContent": "<img src='https://dl.dropbox.com/s/cdl1cl3cwbp7oom/re_photo76.jpeg'/>"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.896,
+          45.05833333333333
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "count": 60,
+        "date": "2013-09-14 10:37:26",
+        "photo_name": "re_photo77.jpeg",
+        "popupContent": "<img src='https://dl.dropbox.com/s/u31cevtw3pohslr/re_photo77.jpeg'/>"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.89583333333333,
+          45.05833333333333
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "count": 61,
+        "date": "2013-09-14 10:37:37",
+        "photo_name": "re_photo78.jpeg",
+        "popupContent": "<img src='https://dl.dropbox.com/s/ixf2rw63btpequf/re_photo78.jpeg'/>"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.89583333333333,
+          45.05833333333333
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "count": 62,
+        "date": "2013-09-14 10:37:47",
+        "photo_name": "re_photo79.jpeg",
+        "popupContent": "<img src='https://dl.dropbox.com/s/0xhvs13wynn9mfi/re_photo79.jpeg'/>"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.98216666666667,
+          45.10333333333333
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "count": 63,
+        "date": "2013-09-14 11:16:18",
+        "photo_name": "re_photo85.jpeg",
+        "popupContent": "<img src='https://dl.dropbox.com/s/uj7muw8vghbff84/re_photo85.jpeg'/>"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.9255,
+          45.1785
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "count": 64,
+        "date": "2013-09-14 12:04:21",
+        "photo_name": "re_photo81.jpeg",
+        "popupContent": "<img src='https://dl.dropbox.com/s/ycfevs7qvbvwif1/re_photo81.jpeg'/>"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.9255,
+          45.1785
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "count": 65,
+        "date": "2013-09-14 12:04:26",
+        "photo_name": "re_photo82.jpeg",
+        "popupContent": "<img src='https://dl.dropbox.com/s/hk8wwfa11wrpseb/re_photo82.jpeg'/>"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.744,
+          45.28033333333333
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "count": 66,
+        "date": "2013-09-14 13:56:42",
+        "photo_name": "re_photo83.jpeg",
+        "popupContent": "<img src='https://dl.dropbox.com/s/fhadc8imz47jwzk/re_photo83.jpeg'/>"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.744,
+          45.28033333333333
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "count": 67,
+        "date": "2013-09-14 13:56:45",
+        "photo_name": "re_photo84.jpeg",
+        "popupContent": "<img src='https://dl.dropbox.com/s/bgt31ujf6nm6hl5/re_photo84.jpeg'/>"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.74416666666667,
+          45.28033333333333
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "count": 68,
+        "date": "2013-09-14 13:57:12",
+        "photo_name": "re_photo87.jpeg",
+        "popupContent": "<img src='https://dl.dropbox.com/s/fkf0drr85g49e0v/re_photo87.jpeg'/>"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.74366666666667,
+          45.28
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "count": 69,
+        "date": "2013-09-14 13:58:44",
+        "photo_name": "re_photo88.jpeg",
+        "popupContent": "<img src='https://dl.dropbox.com/s/cfwhhesny9axw7r/re_photo88.jpeg'/>"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.73566666666666,
+          45.27883333333333
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "count": 70,
+        "date": "2013-09-14 14:02:12",
+        "photo_name": "re_photo95.jpeg",
+        "popupContent": "<img src='https://dl.dropbox.com/s/1ys8q4gpug1cnzu/re_photo95.jpeg'/>"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.73566666666666,
+          45.27883333333333
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "count": 71,
+        "date": "2013-09-14 14:02:17",
+        "photo_name": "re_photo91.jpeg",
+        "popupContent": "<img src='https://dl.dropbox.com/s/xhexdt0p2d4a1wl/re_photo91.jpeg'/>"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.081,
+          45.572
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "count": 72,
+        "date": "2013-09-14 14:17:24",
+        "photo_name": "re_photo92.jpeg",
+        "popupContent": "<img src='https://dl.dropbox.com/s/u5sezhx6i0xbtzr/re_photo92.jpeg'/>"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.081,
+          45.572
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "count": 73,
+        "date": "2013-09-14 14:33:58",
+        "photo_name": "re_photo94.jpeg",
+        "popupContent": "<img src='https://dl.dropbox.com/s/ky36d75xrhp6jzh/re_photo94.jpeg'/>"
+      }
     }
   ]
 }

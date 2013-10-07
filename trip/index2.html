@@ -42,7 +42,12 @@
 
       function onEachFeature(feature, layer) {
         //does this feature have a property named popupContent?
-        layer.bindPopup(feature.properties.popupContent);
+        //popup = new L.popUp(feature.properties.popupContent);
+        layer.bindPopup(feature.properties.popupContent, {
+          minWidth:255,
+          maxWidth:300,
+          maxHeight:300
+        });
         //layer.on({click: clickMarker});
       }
 
