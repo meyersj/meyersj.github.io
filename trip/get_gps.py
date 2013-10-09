@@ -10,8 +10,8 @@ DateTime_tag = 'Image DateTime'
 lat_ref_tag = 'GPS GPSLatitudeRef'
 lon_ref_tag = 'GPS GPSLongitudeRef'
 orientation_tag = 'Image Orientation'
-width_tag = 'Image XResolution'
-height_tag = 'Image YResolution'
+width_tag = 'EXIF ExifImageWidth'
+height_tag = 'EXIF ExifImageLength'
 coordinates = []
 no_coordinates = []
 
@@ -49,8 +49,8 @@ for photo in photos:
   
   #for tag in tags.keys():
     #print tag
-  #print tags[width_tag]
-  #print tags[height_tag]
+  print tags[width_tag]
+  print tags[height_tag]
 
   try:
     lat = coordinate_extract(str(tags[lat_tag]))
@@ -58,10 +58,10 @@ for photo in photos:
     lat_ref = str(tags[lat_ref_tag])
     lon_ref = str(tags[lon_ref_tag])
     
-    if(lon_ref == 'W'):
+    if lon_ref == 'W':
       lon = -lon
-    if(lat_ref == 'S'):
-      kat = -lat
+    if lat_ref == 'S':
+      lat = -lat
 
     f.close()
   except KeyError:
@@ -81,7 +81,7 @@ for photo in photos:
     lon = -123.971,
     lat = 45.354166666666664
 
-
+ 
   data['datetime'] = DateTime      
   data['photo_name'] = photo_name
   data['lat'] = lat

@@ -32,6 +32,10 @@
       var map;
       initmap();
 
+      //map.on({mousedown: function (e) {
+      //  e.closePopup();}
+      //});
+
       function clickMarker(e) {
         var lat = e.latlng.lat + 0.03;
         var lng = e.latlng.lng;
@@ -44,11 +48,9 @@
         //does this feature have a property named popupContent?
         //popup = new L.popUp(feature.properties.popupContent);
         layer.bindPopup(feature.properties.popupContent, {
-          minWidth:255,
-          maxWidth:300,
-          maxHeight:300
-        });
+          autoPanPadding:new L.Point(60,60)
         //layer.on({click: clickMarker});
+        });
       }
 
       //var icon = 'http://dl.dropbox.com/s/vh7fr9sc9pobesk/marker_hole2.png';
