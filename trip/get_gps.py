@@ -96,6 +96,7 @@ count = 1
 for date in dates:
   data = photos_data[date]
   popupContent = "<img src='%s'/>" % dropbox[data['photo_name']]
+  link = "<center><a href='%s'>Link</a></center>" % dropbox[data['photo_name']]
   #popupContent = ""
   feature_out = {'type':'Feature', 
                  'geometry':{'type':'Point', 
@@ -103,6 +104,7 @@ for date in dates:
                  'properties':{'photo_name': data['photo_name'],
                                'count':count,
                                'popupContent':popupContent,
+                               'link':link,
                                'date':str(data['datetime'])}}
                 
   data_out['features'].append(feature_out)

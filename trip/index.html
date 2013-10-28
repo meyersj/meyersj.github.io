@@ -48,7 +48,8 @@
         //does this feature have a property named popupContent?
         //popup = new L.popUp(feature.properties.popupContent);
         var divNode = document.createElement('DIV');
-        divNode.innerHTML = feature.properties.popupContent; 
+        divNode.innerHTML = feature.properties.link + feature.properties.popupContent; 
+
         layer.bindPopup(divNode, {
           autoPanPadding:new L.Point(60,60)
         //layer.on({click: clickMarker});
