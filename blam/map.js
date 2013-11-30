@@ -9,7 +9,7 @@ function initmap() {
   var tiles = new L.TileLayer(tileUrl, {minZoom: 5, maxZoom: 20, attribution: attrib});	 	
 
   // Portland
-  map.setView(new L.LatLng(45.524, -122.675), 13);
+  map.setView(new L.LatLng(45.512326, -122.6429570), 13);
   map.addLayer(tiles);
 }
 
