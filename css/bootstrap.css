@@ -1,0 +1,36 @@
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.content {
+    padding: 10px;
+}
+
+a.anchor {
+    display: block;
+    position: relative;
+    top: -50px;
+    visibility: hidden;
+}
+
+.content-container {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.content-top {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.content-bottom {
+    padding-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+    .content-container {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
